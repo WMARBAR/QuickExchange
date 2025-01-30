@@ -8,7 +8,7 @@ class CurrencyApp(ctk.CTk):
         self.title("QuickExchange")
         self.geometry("500x350")
         # Configurar el icono
-        self.iconbitmap("assets/icon_xchangeAPP.ico")  # Reemplaza "icono.ico" con la ruta de tu archivo .ico
+        #self.iconbitmap("icon_xchangeAPP.ico")  # Reemplaza "icono.ico" con la ruta de tu archivo .ico
 
         # Cambiar el tema de colores
         ctk.set_appearance_mode("dark")
