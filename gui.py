@@ -19,8 +19,8 @@ class CurrencyApp(ctk.CTk):
 
         # Configuración de las fuentes y colores personalizados
         self.title_font = ("Consolas", 20, "bold")
-        self.button_font = ("Consolas", 14, "bold")
-        self.entry_font = ("Consolas", 14)  # Fuente personalizada para el campo de entrada
+        self.button_font = ("Consolas", 20, "bold")
+        self.entry_font = ("Consolas", 20)  # Fuente personalizada para el campo de entrada
         self.title_color = "#00FF00"  # Verde Matrix
         self.button_bg_color = "#00FF00"
         self.button_text_color = "black"
