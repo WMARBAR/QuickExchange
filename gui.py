@@ -1,11 +1,14 @@
 import customtkinter as ctk
 from exchange import ExchangeRateConverter
 
+
 class CurrencyApp(ctk.CTk):
     def __init__(self):
         super().__init__()
-        self.title("CambioXpress")
+        self.title("QuickExchange")
         self.geometry("500x350")
+        # Configurar el icono
+        self.iconbitmap("assets/icon_xchangeAPP.ico")  # Reemplaza "icono.ico" con la ruta de tu archivo .ico
 
         # Cambiar el tema de colores
         ctk.set_appearance_mode("dark")
