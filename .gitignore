@@ -1,6 +1,7 @@
 venv/
 # Ignorar entorno virtual y archivos temporales
 venv/
+VirtualEnviroment/
 build/
 dist/
 *.spec
