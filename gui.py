@@ -8,7 +8,7 @@ class CurrencyApp(ctk.CTk):
         self.title("QuickExchange")
         self.geometry("500x350")
         # Configurar el icono
-        #self.iconbitmap("icon_xchangeAPP.ico")  # Reemplaza "icono.ico" con la ruta de tu archivo .ico
+        self.iconbitmap("static/icoST.ico")  # Reemplaza "icono.ico" con la ruta de tu archivo .ico
 
         # Cambiar el tema de colores
         ctk.set_appearance_mode("dark")
@@ -49,7 +49,22 @@ class CurrencyApp(ctk.CTk):
         self.entry.bind("<KeyPress>", self.validate_input)
 
         # Menú desplegable para seleccionar la moneda de entrada
-        self.input_currencies = {"Pesos Colombianos (COP)": "COP", "Euros (EUR)": "EUR", "Dólares (USD)": "USD"}
+        self.input_currencies = {
+                                    "Pesos Colombianos (COP)": "COP",
+                                    "Euros (EUR)": "EUR",
+                                    "Dólares (USD)": "USD",
+                                    "Bolivianos (BOB)": "BOB",
+                                    "Soles Peruanos (PEN)": "PEN",
+                                    "Reales Brasileños (BRL)": "BRL",
+                                    "Pesos Argentinos (ARS)": "ARS",
+                                    "Pesos Mexicanos (MXN)": "MXN",
+                                    "Pesos Uruguayos (UYU)": "UYU",
+                                    "Guaraníes Paraguayos (PYG)": "PYG",
+                                    "Pesos Chilenos (CLP)": "CLP",
+                                    "Dólares Ecuatorianos (USD)": "USD",  # Ecuador usa el USD
+                                    "Bolívares Venezolanos (VES)": "VES"
+                                }
+        
         self.input_currency_menu = ctk.CTkOptionMenu(
             entry_frame, 
             values=list(self.input_currencies.keys()), 
@@ -72,7 +87,7 @@ class CurrencyApp(ctk.CTk):
         self.change_label.pack(pady=10)
 
         # Menú desplegable para seleccionar la moneda de destino
-        self.output_currencies = {"Euros (EUR)": "EUR", "Dólares (USD)": "USD", "Pesos Colombianos (COP)": "COP"}
+        self.output_currencies = self.input_currencies.copy()
         self.output_currency_menu = ctk.CTkOptionMenu(
             self, 
             values=list(self.output_currencies.keys()), 
